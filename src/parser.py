@@ -35,7 +35,7 @@ class HeadHunterAPI(AbstractGetApiHh, MixinLog):
         else:
             with open(DATA, 'w', encoding='utf-8') as file:
                 file.write(json.dumps(self.all_vacancy, ensure_ascii=False))
-                print(f" Найдено вакансий: {len(self.all_vacancy)} ")
+                print(f"Найдено вакансий: {len(self.all_vacancy)} ")
 
 
         return self.all_vacancy

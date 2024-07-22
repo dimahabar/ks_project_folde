@@ -1,8 +1,9 @@
 import json
 import os
 from config import DATA
+from config import ROOT
 
-vacancies_file_path = os.path.join(DATA, 'data', 'vacancies.json')
+vacancies_file_path = os.path.join(ROOT, 'data', 'vacancies.json')
 
 
 def print_vacancies(vacancies):
