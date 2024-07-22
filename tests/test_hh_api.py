@@ -1,5 +1,8 @@
 from abc import ABC
 
+import pytest
+
+from config import DATA
 from src.parser import HeadHunterAPI
 from src.AbstractGetApiHH import AbstractGetApiHh
 
@@ -9,18 +12,10 @@ def test_issubclass():
     assert issubclass(HeadHunterAPI, AbstractGetApiHh)
 
 
-def test_get_vacancies():
-    assert HeadHunterAPI().get_vacancies('python')
+def test_get_vacancy_from_api():
+    vacancy1 = HeadHunterAPI('tttttt')
 
-
-def test_all_vacancy():
-    get_api = HeadHunterAPI()
-    get_api.get_vacancies('python')
-
-    assert len(get_api.vacancies) > 0
-
-
-
+    assert vacancy1.get_vacancies() == "Vacancy not found"
 
 
 
