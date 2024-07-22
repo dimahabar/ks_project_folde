@@ -7,12 +7,12 @@ from src.AbstractJsonSaver import AbstractJsonSaver
 vacancies_file_path = os.path.join(DATA, 'data', 'vacancies.json')
 
 class JSONSaver(AbstractJsonSaver):
+
     """Класс для добавления вакансий в JSON файл"""
 
 
     def __init__(self, file_path=vacancies_file_path):
         self.file_path = file_path
-
 
     def add_vacancy(self, vacancy, file_path=vacancies_file_path):
         """Метод для добавления вакансий """
@@ -55,5 +55,4 @@ class JSONSaver(AbstractJsonSaver):
             vac_dict = vacancy.__dict__
             filtred_vacancies.append(vac_dict)
             save_to_json(filtred_vacancies, self.file_path)
-
 

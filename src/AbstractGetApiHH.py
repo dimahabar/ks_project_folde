@@ -6,6 +6,9 @@ class AbstractGetApiHh(ABC):
         """Абстрактный класс для получения API с сайта"""
 
         @abstractmethod
-        def get_vacancies(self, query):
+        def __repr__(self):
+            pass
 
+        @abstractmethod
+        def get_vacancy_from_api(self):
             pass
